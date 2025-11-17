@@ -1,0 +1,17 @@
+name : Postman Collection Workflow
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+  schedule:
+    - cron : 30 02 * * * # 8 AM IST every day
+    - cron : 00 14 * * * # 7:30 PM IST Everyday
+    - cron : 00 06 * * 1-5 # 1130 am IST Monday to Friday
+jobs:
+  run-postman-tests:
+    runs-on: ubuntu-latest
+    
+    
+    
+    
